@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="hadi.css">
+    <script type="text/javascript" src="hadi.js"></script>
+    <title>Hadi's Restaurant</title>
+    <link rel="icon" href="logoo.png" type="image/x-icon" />
+</head>
+
+<body>
+    <header>
+
+        <a href="#" class="logo">Hadi's Food</a>
+        <nav class="navigation">
+            <a href="hadi.html">Home</a>
+            <a href="hadi.html">About Us</a>
+            <a href="hadi.html">Menu</a>
+            <a href="hadi.html">Contact Us</a>
+            <a href="review.html">Review </a>
+            <a href="hadi.html">Regstration</a>
+
+
+
+        </nav>
+    </header>
+    <br><br><br>
+    <div id="rev">
+        <table border="1">
+            Whats your name<input type="text">
+            <br>
+            write your review here <input type="text">
+            </p>
+            <button onclick="addReview()" id="bt1">Add Review</button>
+    </div>
+</body>
+
+</html>
+
+<script>function addReview() {
+
+        let coursesTable = document.getElementsByTagName("table")[0];
+
+        let codeInput = document.getElementsByTagName("input")[0];
+
+        let descriptionInput = document.getElementsByTagName("input")[1];
+
+        let courseRow = document.createElement("tr");
+
+        let codeCell = document.createElement("td");
+
+        let descriptionCell = document.createElement("td");
+
+        codeCell.innerHTML = codeInput.value;
+
+        descriptionCell.innerHTML = descriptionInput.value;
+
+        courseRow.appendChild(codeCell);
+
+        courseRow.appendChild(descriptionCell);
+
+        coursesTable.appendChild(courseRow);
+
+        codeInput.value = "";
+
+        descriptionInput.value = "";
+
+    }</script>
